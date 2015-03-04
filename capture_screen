@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# captures screen and saves as a WEBM video file (no audio, though)
+
+avconv -f x11grab -s wxga -r 30 -i :0.0  `date +%F_%H-%M`_$1.webm

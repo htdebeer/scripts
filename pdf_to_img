@@ -1,0 +1,48 @@
+#!/bin/bash
+# Converts a 1 page PDF file to an raster image
+#
+# TODO
+# - reverse order of arguments, as it is conventional to put filename last
+# - nice mapping from format to extension
+# - add in way to select a page from a multi-page PDF file
+
+NUMBER_OF_ARGS=$#
+
+RESOLUTION=300x300
+if [ $NUMBER_OF_ARGS -eq 3 ]; then
+  RESULUTION=$3
+  NUMBER_OF_ARGS=$[NUMBER_OF_ARGS - 1]
+fi
+
+OUTPUT_FORMAT=png
+if [ $NUMBER_OF_ARGS -eq 2 ]; then
+  OUTPUT_FORMAT=$2
+  NUMBER_OF_ARGS=$[NUMBER_OF_ARGS - 1]
+fi
+
+EXTENSION=$OUTPUT_FORMAT
+case $OUTPUT_FORMAT in
+  jpg)  OUTPUT_FORMAT=jpeg
+        EXTENSION=jpg
+        ;;
+  png)  OUTPUT_FORMAT=png16m
+        EXTENSION=png
+        ;;
+  tiff) OUTPUT_FORMAT=tiff24nc
+        EXTENSION=tiff
+        ;;
+  *)    ;;
+esac
+
+if [ $NUMBER_OF_ARGS -eq 1 ]; then
+  FILENAME=`basename $1 .pdf`
+else
+  echo "Usage pdf_to_img:"
+  echo ""
+  echo "    pdf_to_img filename [output_format [resolution]]"
+  echo ""
+  echo "Default output_format is png, for other possible values see https://www.gnu.org/software/ghostscript/devices.html"
+  exit
+fi
+
+gs -sDEVICE=$OUTPUT_FORMAT -r$RESOLUTION -sOutputFile=$FILENAME.$EXTENSION -dNOPAUSE -dBATCH -- $FILENAME.pdf

@@ -1,0 +1,14 @@
+#!/bin/bash
+# Listen to Dutch public radio:
+#
+# Usage:
+# 
+#     radio n
+#
+# n one of 1...6 for listening to radio 1 till 6, defaults to 1
+
+STATION=1
+if [ $# -ge 1 ]; then
+  STATION=$1
+fi
+vlc http://icecast.omroep.nl/radio$STATION-sb-mp3
