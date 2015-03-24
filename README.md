@@ -5,8 +5,8 @@ useful as well.
 
 ## Generate histogram of word-occurrences in PDF files
 
-**script:** `bib2important_words_list.rb`\
-**requires:** [pdftotext](http://www.foolabs.com/xpdf/home.html)
+- **script:** `bib2important_words_list.rb`
+- **requires:** [pdftotext](http://www.foolabs.com/xpdf/home.html)
 
 During my research I gather lots of PDF files of scientific articles and
 books. My interpretation of what the key terms are in the field do not alway
@@ -24,8 +24,8 @@ these are easy to recognize and strip afterwards.
 
 ## Capture a computer session
 
-**script:** `capture_sreen`\
-**requires:** [ffmpeg](https://trac.ffmpeg.org)
+- **script:** `capture_sreen`
+- **requires:** [ffmpeg](https://trac.ffmpeg.org)
 
 When testing educational software, I often would capture the computer sessions
 for later analysis. Running the script `capture_screen some_string` captures the screen as
@@ -36,8 +36,8 @@ https://trac.ffmpeg.org/wiki/Capture/Desktop
 
 ## Convert a PDF image to a bitmap
 
-**script:** `pdf_to_img`\
-**requires:** [ghostscripts](https://www.gnu.org/software/ghostscript)
+- **script:** `pdf_to_img`
+- **requires:** [ghostscripts](https://www.gnu.org/software/ghostscript)
 
 During my research in history and education, I've collected a lot of PDF files
 containing either historical documents or students' products. Sometimes I need
@@ -56,8 +56,8 @@ TODO: convert one page from a multi-page PDF file
 
 ## Listen to Dutch NPO radio (1-6)
 
-**script:** `radio`\
-**requires:** [vlc](http://www.videolan.org/vlc/) (other media players will
+- **script:** `radio`
+- **requires:** [vlc](http://www.videolan.org/vlc/) (other media players will
 work as well, just adapt the script accordingly)
 
 
@@ -73,8 +73,8 @@ started.
 
 ## transcribe.vim
 
-**script:** `transcribe.vim`\
-**requires:** [mplayer](http://mplayerhq.hu)
+- **script:** `transcribe.vim`
+- **requires:** [mplayer](http://mplayerhq.hu)
 
 While doing historical and educational research, I often made audio or video
 recordings I had to transcribe afterwards. As it is a hassle to control two
