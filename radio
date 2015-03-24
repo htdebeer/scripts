@@ -6,9 +6,22 @@
 #     radio n
 #
 # n one of 1...6 for listening to radio 1 till 6, defaults to 1
+#
+# For more information on NPO radio streams, see
+# http://www.npo.nl/specials/digitale-radio
 
 STATION=1
 if [ $# -ge 1 ]; then
   STATION=$1
 fi
-vlc http://icecast.omroep.nl/radio$STATION-sb-mp3
+
+# For some reason, radio 3FM has a different URL than the other radio
+# stations.
+case $STATION in
+    [1,2,4,5,6])
+        RADIOSTATION=radio$STATION-bb-mp3;;
+    3)
+        RADIOSTATION=3fm-bb-mp3;;
+esac
+
+vlc http://icecast.omroep.nl/$RADIOSTATION
