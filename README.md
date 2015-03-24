@@ -3,9 +3,6 @@
 Now and then I find myself automating a simple task that others might find
 useful as well.
 
-* auto-gen TOC:
-{:toc}
-
 ## Generate histogram of word-occurrences in PDF files
 
 - **script:** `bib2important_words_list.rb`
