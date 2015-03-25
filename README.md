@@ -34,6 +34,24 @@ for later analysis. Running the script `capture_screen some_string` captures the
 For more information about capturing screen sessions (including audio) see:
 https://trac.ffmpeg.org/wiki/Capture/Desktop    
 
+## Get all user's repositories from github
+
+- **script:** `get_all_github_repositories.rb`
+- **requires:** gems: [trollop](http://manageiq.github.io/trollop/) and [nokogiri](http://www.nokogiri.org/)
+
+I like to keep copies of all my repositories on Github also on my local
+machines. To automate getting them all up-to-date and on every machine, I
+wrote a simple ruby script.
+
+Usage:
+
+    get_all_github_repositories.rb --username a-name --archive-dir a-dir
+
+Options:    
+  -u, --username=<s>       Github username to get all github repositories from
+  -a, --archive-dir=<s>    Directory to place all github repositories in, default is .
+  -h, --help               Show this message
+
 ## Convert a PDF image to a bitmap
 
 - **script:** `pdf_to_img`
