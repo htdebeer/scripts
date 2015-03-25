@@ -48,9 +48,9 @@ Usage:
     get_all_github_repositories.rb --username a-name --archive-dir a-dir
 
 Options:    
-  -u, --username=<s>       Github username to get all github repositories from
-  -a, --archive-dir=<s>    Directory to place all github repositories in, default is .
-  -h, --help               Show this message
+    -u, --username=<s>       Github username to get all github repositories from
+    -a, --archive-dir=<s>    Directory to place all github repositories in, default is .
+    -h, --help               Show this message
 
 ## Convert a PDF image to a bitmap
 
