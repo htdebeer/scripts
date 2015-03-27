@@ -99,3 +99,23 @@ While doing historical and educational research, I often made audio or video
 recordings I had to transcribe afterwards. As it is a hassle to control two
 application at the same time (editor and media player), I wrote a simple vim
 script to control mplayer from within vim.
+
+## Convert a multi-input file document with pandoc (or only one file)
+
+- **script:** `convert_with_pandoc.sh`
+- **requires:** [pandoc](http://pandoc.org)
+
+I write most of my articles and papers by having one input markdown file for
+each section. To compile the final document and convert to different formats,
+I wrote this script. However, I also want to be able to convert just one
+section, i.e., one input markdown file, to different formats when I am
+discussing only that one section with a collaborator.
+
+Usage:
+
+    convert_with_pandoc.sh [format [input]]
+
+Put this script in the directory containing the input files for a document.
+Adapt the script to convert these input files in order when run with 1 or 0
+arguments. Otherwise, if there are two arguments, convert the input file
+specified to format. 
